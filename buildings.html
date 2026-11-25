@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="EN-CA"> 
+   <head>
+    <meta charset="UTF-8">
+      <!-- Created by Shaina Saporta on -->
+     <title>Personal Portfolio</title>
+     
+     <style>
+       body{
+        background-color: black; 
+         color: white;
+       }
+       
+       .container{
+         display: grid;
+        grid-template-columns: 50% 50%;
+        width: 1150px;
+        margin: 0 auto;
+        gap: 50px;
+       }
+       .grid-item img {
+         width: 100%;
+       }
+       
+       header { 
+         padding: 30px;
+         margin-bottom: 10px;
+      background-color: 66b3ff;
+      position: sticky;
+         top: 0px;
+         z-index: 100;
+       }
+       header h1 {
+         margin: 0px;
+         font-size: 40px;
+         text-align: center; 
+       }
+       
+       h2{ 
+      background-color: 66b3ff;
+         text-align: center;
+         font-size: 100px;
+       }
+       
+       .menu-container {
+         position: absolute;
+         top: 22px;
+         right: 30px;
+         z-index: 101;
+       }
+       
+       .menu-button {
+         background: none;
+         border: none;
+         cursor: pointer;
+         padding: 10px;
+       }
+       
+       .menu-button span {
+         display: block;
+         width: 30px;
+         height: 3px;
+         background-color: white;
+         margin: 6px 0;
+       }
+       
+           .dropdown-menu {
+  display: none;
+  background-color: #444;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-menu a {
+  padding-left: 30px !important;
+}   
+       
+       #navigation {
+         display: none;
+         position: absolute;
+         right: 0;
+         top: 55px;
+         background-color: #333;
+         min-width: 200px;
+       }
+       
+       #navigation.active {
+  display: block;
+}
+
+#navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#navigation li {
+  position: relative;
+}
+
+#navigation a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+}
+
+#navigation a:hover {
+  background-color: #66b3ff;
+  color: black;
+}
+       
+     </style>
+  </head>
+  
+  <body>
+    <header>
+      <h1>
+      Shaina Saporta
+    </h1>
+  
+   <div class="menu-container">
+     <button class="menu-button" onclick="toggleMenu()">
+       <span></span>
+       <span></span>
+       <span></span>
+       <span></span>
+     </button>
+     
+     <nav id="navigation">
+     <ul>
+       <li><a href="index.html">Home</a></li>
+
+      <li class="dropdown">
+        <a href="#" onclick="togglePhotography(event)">Photography ▾</a>
+
+  <ul class="dropdown-menu" id="photographyMenu">
+    <li><a href="nature.html">Nature</a></li>
+    <li><a href="animals.html">Animals</a></li>
+    <li><a href="people.html">People</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="buildings.html">Buildings</a></li>
+  </ul>
+      </li>
+
+      <li><a href="digital-art.html">Digital Art</a></li>
+
+      <li><a href="prints.html">Prints &amp; Mock-ups</a></li>
+       </ul>
+     </nav>
+     
+    </div>
+       </header>
+    
+    <script>
+      function toggleMenu() {
+        document.getElementById("navigation").classList.toggle("active");
+      }
+      function togglePhotography(event) {
+  event.preventDefault();
+  document.getElementById("photographyMenu").classList.toggle("show");
+}
+    </script>
+    
+    <h2>
+      Buuildings
+    </h2>
+
+  </body>
+  
+</html>
